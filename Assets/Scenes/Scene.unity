@@ -249,5 +249,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 561a4c3e18e8e499189bb5a04f0d9299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pool_Prefab: {fileID: 6859099660818558446, guid: 3270e72c1dab39646bd135a675ff14c1, type: 3}
-  number_Value: 99999999
+  PoolPrefab: {fileID: 6859099660818558446, guid: 3270e72c1dab39646bd135a675ff14c1, type: 3}
+  NumberValue: 99999999

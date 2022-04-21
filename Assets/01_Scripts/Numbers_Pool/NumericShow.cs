@@ -4,13 +4,13 @@ public class NumericShow : MonoBehaviour
 {
     private int maxLength = 8;//Max to 99999999
     private float digitDistance = 0.35f;
-    public Pool[] pools;
+    public Pool[] Pools;
     public static NumericShow Instance { get; private set; }
 
     private void Awake()
     {
         Instance = this;
-        pools = GetComponentsInChildren<Pool>();
+        Pools = GetComponentsInChildren<Pool>();
     }
 
     public void ShowMinusHP(long value, Transform target)
@@ -23,7 +23,7 @@ public class NumericShow : MonoBehaviour
         float first = digitDistance * (length / 2);
         for (int i = 0; i < length; ++i)
         {
-            Number_Obj obj = pools[SplitNumbers(value, i)].Get();
+            Number_Obj obj = Pools[SplitNumbers(value, i)].Get();
             obj.trans.position = target.position + new Vector3(first - digitDistance * i, 0, 0);
             obj.enabled = true;
         }

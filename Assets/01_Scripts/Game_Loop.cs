@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class Game_Loop : MonoBehaviour
 {
-    public GameObject pool_Prefab;
-    public int number_Value;
+    public GameObject PoolPrefab;
+    public int NumberValue;
     private Vector2 poolPos = new Vector2(30, 20);
     private Transform trans;
 
     void Start()
     {
         trans = transform;
-        if (pool_Prefab != null)
+        if (PoolPrefab != null)
         {
-            GameObject obj = Instantiate(pool_Prefab);
+            GameObject obj = Instantiate(PoolPrefab);
             obj.transform.localPosition = poolPos;
         }
         if(NumericShow.Instance == null)
@@ -26,7 +26,7 @@ public class Game_Loop : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            NumericShow.Instance.ShowMinusHP(number_Value, trans);
+            NumericShow.Instance.ShowMinusHP(NumberValue, trans);
         }
     }
 }
